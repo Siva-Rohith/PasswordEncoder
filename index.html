@@ -35,7 +35,7 @@
       ')':'1','(':'2','*':'3','&':'4','^':'5','%':'6','$':'7','#':'8','@':'9','!':'0',
       'Z':'M','X':'L','C':'P','V':'O','B':'K','N':'M','M':'Q','A':'J','S':'I','D':'U',
       'F':'H','G':'B','H':'V','J':'G','K':'Y','L':'T','P':'F','O':'C','I':'X','U':'D',
-      'Y':'R','T':'E','R':'S','E':'Z','W':'A','Q':'M'
+      'Y':'R','T':'E','R':'S','E':'Z','W':'A','Q':'M',' ':'SR'
     };
 
     function convertText() {
@@ -44,7 +44,7 @@ if (input.length < 8 || input.length > 14) {
     alert("Password must be between 8 and 14 characters.");
     return;
 }
-      input = input.replace(/ /g, "SR");
+      
 
       let result = '';
       for (let ch of input) {
