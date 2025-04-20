@@ -65,5 +65,41 @@ if (input.length < 8 || input.length > 14) {
       document.getElementById('outputText').value = '';
     }
   </script>
+  <div class="calculator">
+    <input type="text" id="calcDisplay" readonly>
+    <div>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')">+</button>
+    </div>
+    <div>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')">-</button>
+    </div>
+    <div>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')">*</button>
+    </div>
+    <div>
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button onclick="equal()">=</button>
+        <button onclick="insert('/')">/</button>
+    </div>
+    <div>
+        <button onclick="clean()">C</button>
+        <button onclick="back()">←</button>
+        <button onclick="sqrt()">√</button>
+        <button onclick="square()">x²</button>
+        <button onclick="cube()">x³</button>
+    </div>
+</div>
+<script src="calculator.js"></script>
+
 </body>
 </html>
