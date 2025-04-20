@@ -13,7 +13,8 @@
     <textarea id="inputText" placeholder="Type your password here..."></textarea>
 
     <div class="buttons">
-      <button onclick="convertText()">Convert</button>
+      <button onclick="convertText()">Encode</button>
+      <button onclick="resetAll()">Reset</button>
     </div>
 
     <label for="outputText">Encoded Password:</label>
@@ -21,7 +22,7 @@
 
     <div class="post-output-buttons">
       <button onclick="copyText()">Copy Output</button>
-      <button onclick="resetAll()">Reset</button>
+      
     </div>
   </div>
 
@@ -39,6 +40,12 @@
 
     function convertText() {
       const input = document.getElementById('inputText').value;
+if (input.length < 8 || input.length > 14) {
+    alert("Password must be between 8 and 14 characters.");
+    return;
+}
+      input = input.replace(/ /g, "SR");
+
       let result = '';
       for (let ch of input) {
         result += map[ch] ?? ch;
